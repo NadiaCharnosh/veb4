@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.pinimg.com/736x/01/9d/80/019d80d7a3baea9f35480c27ae7d4d7f.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column;
+
+}
+
+.all {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8vw;
+
+}
+
+.mit,
+.taki {
+    position: relative;
+    margin-top: 5vh;
+    text-align: center;
+    background-color: #dbd8f4;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Тінь для блоків */
+    width: 200px;
+    /* Фіксована ширина блоків */
+    transition: transform 0.3s;
+}
+
+.miki {
+    position: relative;
+    margin-top: 5vh;
+    text-align: center;
+    background-color: #dbd8f4;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Тінь для блоків */
+    width: 200px;
+    height: 540px;
+    transition: transform 0.3s;
+}
+
+.mit:hover,
+.taki:hover,
+.miki:hover {
+    transform: scale(1.05);
+}
+
+.text {
+    width: 40vw;
+    width: 50vw;
+    margin-right: 4vw;
+    justify-content: center;
+}
+
+
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hamburger {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    width: 40px;
+    height: 30px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Рівномірний розподіл полосок */
+    cursor: pointer;
+    /* Вказівник змінюється на "руку" при наведенні */
+}
+
+.up {
+    background-color: rgba(22, 21, 77, 0.768);
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+
+    padding: 0 1vw;
+    /* Відступи зліва та справа */
+    gap: 1vw;
+    /* Проміжок між елементами */
+}
+
+.down {
+    background-color: rgba(0, 0, 0, 0.423);
+    height: 6.8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-top: 0;
+    z-index: 1000;
+    /* означає, що елемент буде накладений на більшість інших елементів, якщо їх z-index менший. */
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    list-style-type: none;
+}
+
+
+
+.ph1 {
+    color: rgb(201, 204, 237);
+}
+
+li a {
+    text-decoration: none;
+    color: inherit;
+    /* Додає колір тексту, який успадковується від батьківського елемента */
+    color: aliceblue;
+}
+
+li a:hover {
+
+    color: blue;
+    /* Зміна кольору при наведенні  */
+}
+
+
+.line {
+    height: 4px;
+    width: 100%;
+    background-color: rgb(170, 169, 233);
+    border-radius: 5px;
+}
+
+.first {
+    width: 2vw;
+    position: fixed;
+    right: 95vw;
+
+}
+
+
+.hamburger_mobail {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+
+.hamburger_mobail {
+    display: none;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: flex-start;
+    /* Налаштування для десктопу */
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 850px) {
+    .hamburger_mobail {
+        display: block;
+        margin-top: 2vh;
+        margin-right: 10vw;
+        width: 40px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* Рівномірний розподіл полосок */
+        cursor: pointer;
+        /* Вказівник змінюється на "руку" при наведенні */
+
+        margin-top: -0.5vh;
+    }
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background-color: rgb(170, 169, 233);
+        border-radius: 5px;
+
+    }
+
+
+
+    ul {
+        display: none;
+    }
+
+    .all {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* Якщо блоки не поміщаються, вони будуть переноситися */
+        gap: 10px;
+        /* Відстань між блоками */
+    }
+
+    .mit,
+    .taki,
+    .miki {
+        width: 180px;
+        /* Зменшення ширини блоків */
+        height: auto;
+        /* Автоматична висота з урахуванням пропорцій */
+        padding: 10px;
+        /* Зменшення внутрішніх відступів */
+        font-size: 12px;
+        /* Зменшення розміру тексту */
+    }
+
+    .mit img,
+    .taki img,
+    .miki img {
+        width: 100%;
+        /* Адаптація зображення під нову ширину блоку */
+        height: auto;
+    }
+
+    .mit h3,
+    .taki h3,
+    .miki h3 {
+        font-size: 14px;
+        /* Зменшення розміру заголовків */
+    }
+
+    .mit p,
+    .taki p,
+    .miki p {
+        font-size: 10px;
+        /* Зменшення розміру тексту опису */
+    }
+
+    .text {
+        width: 70vw;
+
+        justify-content: center;
+    }
+
+    .first {
+        display: block;
+        position: static;
+        margin: 0 auto;
+        margin-left: 30px;
+        width: 5vw;
+    }
+
+    .up {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .search-bar {
+        margin-top: -2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin-right: 38vw;
+        margin-top: 3vh;
+
+    }
+
+
+    .down {
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+        z-index: 1;
+    }
+
+}
